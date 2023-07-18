@@ -126,7 +126,6 @@ class Client:
         while True:
 
             os.system("cls")
-            #num_mines = self.mines - self.cont("* ")
 
             op = 0
             def upload_data():
@@ -168,14 +167,9 @@ class Client:
             print(f"MINAS RESTANTES TOTALES: {num_mines}\nJUGADOR: {self.num_player}")
             self.printmin(self.matrix,i,j)
             aux = []
-            #while True:
             p1 = int(input("\nFila: "))
             p2 = ord(input("Columna: ").upper()) - 64
             p3 = input("Colocar mina? (s/n): ").lower()
-                #if (p1, p2) in self.storage:
-                 #   print("La casilla seleccionada ya ha sido elegida previamente")
-                #else:
-                 #   break
 
             aux.append(p1)
             aux.append(p2)
@@ -195,10 +189,9 @@ class Client:
                 data = b''
                 data += conn_server.recv(int(data_len))
                 data_deserial = pickle.loads(data)
-                #print("Arreglo: ", data_deserial)
+                #print("dataserial: ", data_deserial)
                 #input("pause")
 
-                #print("dataserial", data_deserial)
                 option = self.review_selection(data_deserial, i, j, i1, j1)
 
                 if option == -1:
@@ -228,13 +221,8 @@ class Client:
                 return -1
             case 1:
                 self.matrix[i1-1][j1-1] = "*"
-                #self.printmin(self.matrix,i,j)
                 return 1
             case 2:
-                #print(data_deserial[1])
-                #input("PAUSE")
-                print("AYUDA", data_deserial[1])
-                input("PAUSE")
                 try:
                     self.matrix = data_deserial[1]
                 except:

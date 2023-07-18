@@ -52,7 +52,7 @@ class Servidor:
 
                 level = conn_client.recv(HEADER)   #Recibe los datos principales correspondientes al nivel seleccionado por el usuario
 
-                print("aux111: ", self.check_threads())
+                #print("aux111: ", self.check_threads())
                 #Si no hay "level" rompe la conexión 
                 if not level:
                     break
@@ -189,9 +189,6 @@ class Servidor:
         i = int(i) - 1
         j = int(j) - 1
 
-        #print("1: ", campoShow)
-        #input("PAUSE")
-
         if mina == "s":
             campoShow[i][j] = "*"
             return 1
@@ -209,7 +206,6 @@ class Servidor:
                                     campoShow = self.clic(campo,campoShow,i+1+a,j+1+b,"n")
                             except:
                                 pass
-        #print("CAMPO: ", campoShow)
         return campoShow
 
 
@@ -246,7 +242,6 @@ class Servidor:
         #for i in range(len(matrix)):
             #for j in range(len(matrix)):
         if matrix[i][j] == "*":
-                    #print("+"+client_matrix[i][j]+"+ +"+matrix[i][j]+"+")
             count += 1
 
         return count
