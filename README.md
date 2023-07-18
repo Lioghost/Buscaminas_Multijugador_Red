@@ -7,7 +7,7 @@ The development of this program corresponds a modified version of the typical **
 Operating System - **Windows11/Ubuntu 22.04 LTS** - **Python3.10** or higher version 
 
 
-Note: 
+Note: The current game execution was carried out on **localhost**, however, if you want to test on a local or external network on different computers, just change the IP address definied in the code in both files to maintain communication between the client and the server.
 
 1. Start the server **server_buscaminas.py**
 
